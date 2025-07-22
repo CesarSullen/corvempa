@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Corvempa</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&family=Montserrat:wght@600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style/style.css" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<div class="container">
+				<div class="header-content">
+					<div class="logo">Corvempa</div>
+					<div class="burger-menu" onclick="toggleMenu()">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+				</div>
+				<nav>
+					<ul class="nav-bar">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#menu">Menú</a></li>
+						<li><a href="#dulces">Dulces</a></li>
+						<li><a href="#ubicacion">Ubicación</a></li>
+						<li><a href="#contacto">Contacto</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<div class="hero">
+			<div class="hero-content">
+				<h1>Corvempa</h1>
+				<p>Repostería con amor y fé. Dios provee, nosotros servimos.</p>
+				<div class="cta-section">
+					<a href="#menu" class="btn">Ver Menú</a>
+					<a href="./views/form.html" class="btn">Hacer pedido</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Menú de Empanadas -->
+		<section id="menu" class="section">
+			<div class="container">
+				<h2 class="section-title">Nuestras <span>Empanadas</span></h2>
+
+				<div class="menu-container">
+					<!-- Empanada 1 -->
+					<div class="menu-item">
+						<div class="menu-item-img">
+							<img src="./assets/images/empanada_1.jpg" />
+						</div>
+						<div class="menu-item-content">
+							<span class="menu-item-flag">Especialidad</span>
+							<h3 class="menu-item-title">Empanada de Coco y Guayaba (c/u)</h3>
+							<p class="menu-item-desc">
+								Empanada artesanal rellena de una mezcla dulce y tropical de
+								coco y guayaba, horneada con amor y tradición latina.
+							</p>
+							<div class="menu-item-price">80CUP</div>
+						</div>
+					</div>
+
+					<!-- Empanada 2 -->
+					<div class="menu-item">
+						<div class="menu-item-img">
+							<img src="./assets/images/empanada_1.jpg" />
+						</div>
+						<div class="menu-item-content">
+							<h3 class="menu-item-title">
+								Empanadas de Leche Condensada (10 u)
+							</h3>
+							<p class="menu-item-desc">
+								Bandeja con 10 empanadas rellenas de cremosa leche condensada,
+								ideales para compartir con un toque dulce y suave.
+							</p>
+							<div class="menu-item-price">1000CUP</div>
+						</div>
+					</div>
+
+					<!-- Empanada 3 -->
+					<div class="menu-item">
+						<div class="menu-item-img">
+							<img src="./assets/images/empanada_1.jpg" />
+						</div>
+						<div class="menu-item-content">
+							<span class="menu-item-flag">Recomendada</span>
+							<h3 class="menu-item-title">Empanadas de Jamón (10 u)</h3>
+							<p class="menu-item-desc">
+								Bandeja con 10 empanadas rellenas de jamón sazonado, ofreciendo
+								un sabor salado y auténtico de la cocina latina.
+							</p>
+							<div class="menu-item-price">1300CUP</div>
+						</div>
+					</div>
+
+					<!-- Empanada 4 -->
+					<div class="menu-item">
+						<div class="menu-item-img">
+							<img src="./assets/images/empanada_1.jpg" />
+						</div>
+						<div class="menu-item-content">
+							<h3 class="menu-item-title">Empanadas de Queso (10 u)</h3>
+							<p class="menu-item-desc">
+								Bandeja con 10 empanadas rellenas de queso fundido, un clásico
+								irresistible con textura cremosa.
+							</p>
+							<div class="menu-item-price">1300CUP</div>
+						</div>
+					</div>
+
+					<!-- Empanada 5 -->
+					<div class="menu-item">
+						<div class="menu-item-img">
+							<img src="./assets/images/empanada_1.jpg" />
+						</div>
+						<div class="menu-item-content">
+							<span class="menu-item-flag">Nueva</span>
+							<h3 class="menu-item-title">Empanadas de Jamón y Queso (10 u)</h3>
+							<p class="menu-item-desc">
+								Bandeja con 10 empanadas combinando jamón y queso fundido, una
+								delicia sabrosa y equilibrada.
+							</p>
+							<div class="menu-item-price">1400CUP</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Menú de Dulces -->
+		<section
+			id="dulces"
+			class="section"
+			style="background-color: var(--bg-color)"
+		>
+			<div class="container">
+				<h2 class="section-title">Nuestros <span>Dulces</span></h2>
+
+				<div class="divider">
+					<span class="divider-text">Acompañamientos Perfectos</span>
+				</div>
+
+				<div class="menu-container">
+					<!-- Dulce 1 -->
+					<div class="menu-item">
+						<div class="menu-item-img">
+							<img src="./assets/images/croquetas_1.jpg" />
+						</div>
+						<div class="menu-item-content">
+							<span class="menu-item-flag">Especialidad</span>
+							<h3 class="menu-item-title">Croquetas de Especias (30 u)</h3>
+							<p class="menu-item-desc">
+								Bandeja de 30 croquetas esféricas de 4 cm con un sabor especiado
+								único.
+							</p>
+							<h4>Agregados disponibles:</h4>
+							<ul>
+								<li>Queso: <span class="menu-item-price">+650CUP</span></li>
+								<li>Pollo: <span class="menu-item-price">+800CUP</span></li>
+								<li>Jamón: <span class="menu-item-price">+1200CUP</span></li>
+								<li>
+									Jamón y Queso: <span class="menu-item-price">1650CUP</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Dulce 2 -->
+					<div class="menu-item">
+						<div class="menu-item-img">
+							<img src="./assets/images/rosquillas_1.jpg" />
+						</div>
+						<div class="menu-item-content">
+							<h3 class="menu-item-title">Rosquillas Tradicionales (10 u)</h3>
+							<p class="menu-item-desc">
+								Bandeja de 10 rosquillas de 12 cm con sabor tradicional y
+								crujiente.
+							</p>
+							<h4>Agregados disponibles:</h4>
+							<ul>
+								<li>
+									Chocolate:
+									<span class="menu-item-price">+500CUP</span>
+								</li>
+								<li>
+									Leche Condensada:
+									<span class="menu-item-price">+500CUP</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Dulce 3 -->
+					<div class="menu-item">
+						<div class="menu-item-img">
+							<img src="./assets/images/calzones_2.jpg" />
+						</div>
+						<div class="menu-item-content">
+							<h3 class="menu-item-title">Churros Tradicionales (10 u)</h3>
+							<p class="menu-item-desc">
+								Bandeja de 500gr de churros tradicionales, crujientes y dorados.
+							</p>
+							<h4>Agregados disponibles:</h4>
+							<ul>
+								<li>
+									Chocolate:
+									<span class="menu-item-price">+500CUP</span>
+								</li>
+								<li>
+									Leche Condensada:
+									<span class="menu-item-price">+500CUP</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Dulce 4 -->
+					<div class="menu-item">
+						<div class="menu-item-img">
+							<img src="./assets/images/margaritas_1.jpg" />
+						</div>
+						<div class="menu-item-content">
+							<span class="menu-item-flag">Nueva</span>
+							<h3 class="menu-item-title">
+								Margaritas Rellenas de Guayaba (15 u)
+							</h3>
+							<p class="menu-item-desc">
+								Bandeja de 15 margaritas rellenas con dulce de guayaba, un sabor
+								tropical.
+							</p>
+						</div>
+					</div>
+
+					<!-- Dulce 5 (Calzones aparte) -->
+					<div class="menu-item">
+						<div class="menu-item-img">
+							<img src="./assets/images/calzones_1.jpg" />
+						</div>
+						<div class="menu-item-content">
+							<h3 class="menu-item-title">
+								Calzones Rellenos de Guayaba (c/u)
+							</h3>
+							<p class="menu-item-desc">
+								Calzones individuales rellenos de guayaba, perfectos para un
+								dulce rápido y delicioso.
+							</p>
+							<div class="menu-item-price">80CUP</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Sección Ubicación -->
+		<section id="ubicacion" class="section">
+			<div class="container">
+				<h2 class="section-title">Nuestra <span>Ubicación</span></h2>
+
+				<div class="divider">
+					<span class="divider-text">Ven a Visitarnos</span>
+				</div>
+
+				<div class="location-container">
+					<div class="location-info">
+						<h3>Corvempa</h3>
+						<p>
+							<strong>Dirección:</strong> Calle Obispo #123, Habana Vieja, La
+							Habana, Cuba
+						</p>
+
+						<p>
+							<strong>Teléfono:</strong
+							><a href="tel:+53 (593) 737-21"> +53 (593) 737-21 </a>
+						</p>
+
+						<p>
+							<strong>Email:</strong>
+							<a href="mailto:rosacarrion777@gmail.com"
+								>rosacarrion777@gmail.com</a
+							>
+						</p>
+
+						<h1 style="color: var(--primary-color)">Horario de Atención:</h1>
+						<ul class="opening-hours">
+							<li>
+								<span>Lunes - Jueves:</span>
+								<span class="oph">11:00 AM - 10:00 PM</span>
+							</li>
+							<li>
+								<span>Viernes - Sábado:</span>
+								<span class="oph">11:00 AM - 11:00 PM</span>
+							</li>
+							<li>
+								<span>Domingo:</span>
+								<span class="oph">12:00 PM - 9:00 PM</span>
+							</li>
+						</ul>
+					</div>
+					<div class="location-map">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.998346384924!2d-82.3529079246876!3d23.13637151236209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88cd782dc6e2a3a9%3A0x7f8a7f4e1e3e1f8e!2sCalle%20Obispo%2C%20La%20Habana%20Vieja%2C%20Cuba!5e0!3m2!1ses!2sus!4v1620000000000!5m2!1ses!2sus"
+						></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Sección Contáctanos -->
+		<section
+			id="contacto"
+			class="section"
+			style="background-color: var(--bg-color)"
+		>
+			<div class="container">
+				<h2 class="section-title">Contáct<span>anos</span></h2>
+
+				<div class="divider">
+					<span class="divider-text">Conecta con Nosotros</span>
+				</div>
+
+				<div class="social-contact">
+					<div class="social-image">
+						<img src="./assets/images/calzones_3.jpg" />
+					</div>
+					<div class="social-links">
+						<div class="social-item">
+							<a
+								href="https://www.instagram.com/corvempa"
+								target="_blank"
+								class="social-link"
+							>
+								<svg
+									class="w-6 h-6 social-icon"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									fill="none"
+									viewBox="0 0 24 24"
+								>
+									<path
+										fill="currentColor"
+										fill-rule="evenodd"
+										d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+								<span class="social-text">Instagram</span>
+							</a>
+						</div>
+						<div class="social-item">
+							<a
+								href="https://www.facebook.com/corvempa"
+								target="_blank"
+								class="social-link"
+							>
+								<svg
+									class="w-6 h-6 social-icon"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+								<span class="social-text">Facebook</span>
+							</a>
+						</div>
+						<div class="social-item">
+							<a
+								href="https://wa.me/5351234567"
+								target="_blank"
+								class="social-link"
+							>
+								<svg
+									class="w-6 h-6 social-icon"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M12 2C6.477 2 2 6.477 2 12a9.97 9.97 0 0 0 1.3 4.93L2 22l5.07-1.3A9.97 9.97 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm3.27 14.83a2.5 2.5 0 0 1-2.13.94c-.51 0-.94-.15-1.55-.6-1.08-.79-2.13-1.94-3.02-3.22-.87-1.27-1.5-2.6-1.65-3.95a2.5 2.5 0 0 1 .76-2.02c.27-.27.62-.42 1-.42h.47c.33 0 .65.17.83.45l.7 1.07c.2.3.25.68.12.99-.1.24-.28.45-.5.6l-.3.22c-.2.14-.3.36-.26.58.2.66.58 1.3 1.02 1.88.45.58.98 1.07 1.65 1.4.23.11.5.07.74-.05l.36-.2c.3-.16.65-.22.97-.1l1.2.6c.32.16.56.47.65.82.1.35.03.73-.2 1.05Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+								<span class="social-text">WhatsApp</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-about">
+						<div class="footer-logo">Corvempa</div>
+						<p class="footer-slogan">"Disfruta lo bueno que Dios nos da."</p>
+						<div class="social-icons">
+							<a href="https://www.facebook.com/corvempa" target="_blank">
+								<svg
+									class="w-6 h-6 text-gray-800 dark:text-white"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</a>
+							<a href="https://www.instagram.com/corvempa" target="_blank">
+								<svg
+									class="w-6 h-6 text-gray-800 dark:text-white"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									fill="none"
+									viewBox="0 0 24 24"
+								>
+									<path
+										fill="currentColor"
+										fill-rule="evenodd"
+										d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</a>
+							<a href="https://wa.me/5351234567" target="_blank">
+								<svg
+									class="w-6 h-6 text-gray-800 dark:text-white"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M12 2C6.477 2 2 6.477 2 12a9.97 9.97 0 0 0 1.3 4.93L2 22l5.07-1.3A9.97 9.97 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm3.27 14.83a2.5 2.5 0 0 1-2.13.94c-.51 0-.94-.15-1.55-.6-1.08-.79-2.13-1.94-3.02-3.22-.87-1.27-1.5-2.6-1.65-3.95a2.5 2.5 0 0 1 .76-2.02c.27-.27.62-.42 1-.42h.47c.33 0 .65.17.83.45l.7 1.07c.2.3.25.68.12.99-.1.24-.28.45-.5.6l-.3.22c-.2.14-.3.36-.26.58.2.66.58 1.3 1.02 1.88.45.58.98 1.07 1.65 1.4.23.11.5.07.74-.05l.36-.2c.3-.16.65-.22.97-.1l1.2.6c.32.16.56.47.65.82.1.35.03.73-.2 1.05Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<div class="footer-info">
+						<h3 class="footer-title">Horario</h3>
+						<ul class="opening-hours">
+							<li>
+								<span class="oph">Lun - Jue:</span> <span>11AM - 10PM</span>
+							</li>
+							<li>
+								<span class="oph">Vie - Sáb:</span> <span>11AM - 11PM</span>
+							</li>
+							<li><span class="oph">Domingo:</span> <span>12PM - 9PM</span></li>
+						</ul>
+					</div>
+
+					<div class="footer-info">
+						<h3 class="footer-title">Contacto</h3>
+						<p>
+							<i class="fas fa-map-marker-alt"></i> Calle Obispo #123, Habana
+							Vieja
+						</p>
+						<p><i class="fas fa-phone"></i> +53 (593) 737-21</p>
+						<p><i class="fas fa-envelope"></i> rosacarrion777@gmail.com</p>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<a href="https://SynthOcean.com" target="_blank">
+						<p>Powered by <span class="bold">SynthOcean</span></p>
+						<img src="./assets/icons/so-white-color.svg" class="so-logo" />
+					</a>
+
+					<p class="copyright">© 2025 All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Font Awesome para iconos -->
+		<script
+			src="https://kit.fontawesome.com/a076d05399.js"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Corvempa - Hacer Pedido</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&family=Montserrat:wght@600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../style/style.css" />
+		<link rel="stylesheet" href="../style/form.css" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<div class="container">
+				<div class="header-content">
+					<div class="logo">Corvempa</div>
+					<div class="burger-menu" onclick="toggleMenu()">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+				</div>
+				<nav>
+					<ul class="nav-bar">
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="index.html#menu">Menú</a></li>
+						<li><a href="index.html#dulces">Dulces</a></li>
+						<li><a href="index.html#ubicacion">Ubicación</a></li>
+						<li><a href="index.html#contacto">Contacto</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Formulario de Pedido -->
+		<section id="pedido" class="section">
+			<div class="container">
+				<h2 class="section-title">Hacer <span>Pedido</span></h2>
+				<div class="divider">
+					<span class="divider-text">Personaliza tu orden</span>
+				</div>
+				<form id="order-form" class="order-form">
+					<div class="form-group">
+						<label for="name">Nombre:</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							required
+							placeholder="Tu nombre"
+						/>
+					</div>
+					<div class="form-group">
+						<label for="phone">Teléfono:</label>
+						<input
+							type="tel"
+							id="phone"
+							name="phone"
+							required
+							placeholder="+53 123 456 78"
+						/>
+					</div>
+					<div class="form-group">
+						<h3>Empanadas</h3>
+						<div class="form-item">
+							<label for="empanada-coco-guayaba">Coco y Guayaba (c/u):</label>
+							<input
+								type="number"
+								id="empanada-coco-guayaba"
+								name="empanada-coco-guayaba"
+								min="0"
+								value="0"
+							/>
+							<span class="form-price">80CUP</span>
+						</div>
+						<div class="form-item">
+							<label for="empanada-leche-condensada"
+								>Leche Condensada (10 u):</label
+							>
+							<input
+								type="number"
+								id="empanada-leche-condensada"
+								name="empanada-leche-condensada"
+								min="0"
+								value="0"
+							/>
+							<span class="form-price">1000CUP</span>
+						</div>
+						<div class="form-item">
+							<label for="empanada-jamon">Jamón (10 u):</label>
+							<input
+								type="number"
+								id="empanada-jamon"
+								name="empanada-jamon"
+								min="0"
+								value="0"
+							/>
+							<span class="form-price">1300CUP</span>
+						</div>
+						<div class="form-item">
+							<label for="empanada-queso">Queso (10 u):</label>
+							<input
+								type="number"
+								id="empanada-queso"
+								name="empanada-queso"
+								min="0"
+								value="0"
+							/>
+							<span class="form-price">1300CUP</span>
+						</div>
+						<div class="form-item">
+							<label for="empanada-jamon-queso">Jamón y Queso (10 u):</label>
+							<input
+								type="number"
+								id="empanada-jamon-queso"
+								name="empanada-jamon-queso"
+								min="0"
+								value="0"
+							/>
+							<span class="form-price">1400CUP</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<h3>Dulces</h3>
+						<div class="form-item">
+							<label for="croquetas-especias"
+								>Croquetas de Especias (30 u):</label
+							>
+							<input
+								type="number"
+								id="croquetas-especias"
+								name="croquetas-especias"
+								min="0"
+								value="0"
+							/>
+							<span class="form-price">2000CUP</span>
+							<div class="form-agregados">
+								<select name="croquetas-especias-agregado">
+									<option value="">Sin agregado</option>
+									<option value="Queso (+650CUP)">Queso (+650CUP)</option>
+									<option value="Pollo (+800CUP)">Pollo (+800CUP)</option>
+									<option value="Jamón (+1200CUP)">Jamón (+1200CUP)</option>
+									<option value="Jamón y Queso (+1650CUP)">
+										Jamón y Queso (+1650CUP)
+									</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-item">
+							<label for="rosquillas-tradicionales"
+								>Rosquillas Tradicionales (10 u):</label
+							>
+							<input
+								type="number"
+								id="rosquillas-tradicionales"
+								name="rosquillas-tradicionales"
+								min="0"
+								value="0"
+							/>
+							<span class="form-price">800CUP</span>
+							<div class="form-agregados">
+								<select name="rosquillas-tradicionales-agregado">
+									<option value="">Sin agregado</option>
+									<option value="Chocolate (+500CUP)">
+										Chocolate (+500CUP)
+									</option>
+									<option value="Leche Condensada (+500CUP)">
+										Leche Condensada (+500CUP)
+									</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-item">
+							<label for="churros-tradicionales"
+								>Churros Tradicionales (500gr):</label
+							>
+							<input
+								type="number"
+								id="churros-tradicionales"
+								name="churros-tradicionales"
+								min="0"
+								value="0"
+							/>
+							<span class="form-price">800CUP</span>
+							<div class="form-agregados">
+								<select name="churros-tradicionales-agregado">
+									<option value="">Sin agregado</option>
+									<option value="Chocolate (+500CUP)">
+										Chocolate (+500CUP)
+									</option>
+									<option value="Leche Condensada (+500CUP)">
+										Leche Condensada (+500CUP)
+									</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-item">
+							<label for="margaritas-guayaba"
+								>Margaritas Rellenas de Guayaba (15 u):</label
+							>
+							<input
+								type="number"
+								id="margaritas-guayaba"
+								name="margaritas-guayaba"
+								min="0"
+								value="0"
+							/>
+							<span class="form-price">570CUP</span>
+						</div>
+						<div class="form-item">
+							<label for="calzones-guayaba"
+								>Calzones Rellenos de Guayaba (c/u):</label
+							>
+							<input
+								type="number"
+								id="calzones-guayaba"
+								name="calzones-guayaba"
+								min="0"
+								value="0"
+							/>
+							<span class="form-price">80CUP</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="notas">Notas adicionales:</label>
+						<textarea
+							id="notas"
+							name="notas"
+							placeholder="Ejemplo: Sin sal, entrega a las 3 PM"
+						></textarea>
+					</div>
+					<button type="submit" class="btn">Enviar Pedido</button>
+				</form>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-about">
+						<div class="footer-logo">Corvempa</div>
+						<p class="footer-slogan">"Disfruta lo bueno que Dios nos da."</p>
+						<div class="social-icons">
+							<a href="https://www.facebook.com/corvempa" target="_blank">
+								<svg
+									class="w-6 h-6"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</a>
+							<a href="https://www.instagram.com/corvempa" target="_blank">
+								<svg
+									class="w-6 h-6"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									fill="none"
+									viewBox="0 0 24 24"
+								>
+									<path
+										fill="currentColor"
+										fill-rule="evenodd"
+										d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</a>
+							<a href="https://wa.me/5359373721" target="_blank">
+								<svg
+									class="w-6 h-6"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M12 2C6.477 2 2 6.477 2 12a9.97 9.97 0 0 0 1.3 4.93L2 22l5.07-1.3A9.97 9.97 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Zm3.27 14.83a2.5 2.5 0 0 1-2.13.94c-.51 0-.94-.15-1.55-.6-1.08-.79-2.13-1.94-3.02-3.22-.87-1.27-1.5-2.6-1.65-3.95a2.5 2.5 0 0 1 .76-2.02c.27-.27.62-.42 1-.42h.47c.33 0 .65.17.83.45l.7 1.07c.2.3.25.68.12.99-.1.24-.28.45-.5.6l-.3.22c-.2.14-.3.36-.26.58.2.66.58 1.3 1.02 1.88.45.58.98 1.07 1.65 1.4.23.11.5.07.74-.05l.36-.2c.3-.16.65-.22.97-.1l1.2.6c.32.16.56.47.65.82.1.35.03.73-.2 1.05Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="footer-info">
+						<h3 class="footer-title">Horario</h3>
+						<ul class="opening-hours">
+							<li>
+								<span class="oph">Lun - Jue:</span> <span>11AM - 10PM</span>
+							</li>
+							<li>
+								<span class="oph">Vie - Sáb:</span> <span>11AM - 11PM</span>
+							</li>
+							<li><span class="oph">Domingo:</span> <span>12PM - 9PM</span></li>
+						</ul>
+					</div>
+					<div class="footer-info">
+						<h3 class="footer-title">Contacto</h3>
+						<p>
+							<i class="fas fa-map-marker-alt"></i> Calle Obispo #123, Habana
+							Vieja
+						</p>
+						<p><i class="fas fa-phone"></i> +53 (593) 737-21</p>
+						<p><i class="fas fa-envelope"></i> rosacarrion777@gmail.com</p>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<a href="https://SynthOcean.com" target="_blank">
+						<p>Powered by <span class="bold">SynthOcean</span></p>
+						<img src="../assets/icons/so-white-color.svg" class="so-logo" />
+					</a>
+					<p class="copyright">© 2025 All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script
+			src="https://kit.fontawesome.com/a076d05399.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="../js/main.js"></script>
+		<script src="../js/form.js"></script>
+	</body>
+</html>

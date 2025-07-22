@@ -1,0 +1,133 @@
+/* Formulario de Pedido */
+.section#pedido {
+	background: linear-gradient(to bottom, var(--light-color), var(--bg-color));
+	padding: 80px 0;
+	position: relative;
+}
+
+.order-form {
+	background: var(--bg-color);
+	border-radius: 15px;
+	padding: 30px;
+	box-shadow: 0 10px 30px var(--shadow-color);
+	max-width: 700px;
+	margin: 0 auto;
+	border: solid 2px var(--primary-color);
+}
+
+.form-group {
+	margin-bottom: 30px;
+}
+
+.form-group h3 {
+	font-family: "Playfair Display", serif;
+	font-size: 1.8rem;
+	color: var(--primary-color);
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.form-group h3::after {
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 3px;
+	background: var(--accent-color);
+	bottom: -10px;
+	left: 0;
+}
+
+.form-group label {
+	display: block;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.1rem;
+	color: var(--text-color);
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid var(--primary-color);
+	border-radius: 5px;
+	font-size: 1rem;
+	font-family: "Roboto", sans-serif;
+	color: var(--text-color);
+	background: var(--light-color);
+	transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+	outline: none;
+	border-color: var(--accent-color);
+	box-shadow: 0 0 8px rgba(90, 127, 75, 0.3);
+}
+
+.form-group textarea {
+	height: 100px;
+	resize: vertical;
+}
+
+.form-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+.form-item label {
+	flex: 1;
+	min-width: 200px;
+}
+
+.form-item input[type="number"] {
+	width: 60px;
+	text-align: center;
+	padding: 12px;
+	border: 1px solid var(--primary-color);
+	border-radius: 5px;
+	font-size: 1rem;
+	font-family: "Roboto", sans-serif;
+	color: var(--text-color);
+	background: var(--light-color);
+	transition: border-color 0.3s ease;
+}
+
+.form-price {
+	font-family: "Playfair Display", serif;
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+.form-agregados {
+	flex: 1;
+	min-width: 200px;
+}
+
+.form-agregados h4 {
+	font-size: 1rem;
+	margin-bottom: 8px;
+	color: var(--secondary-color);
+}
+
+.order-form .btn {
+	width: 100%;
+	max-width: none;
+	margin-top: 20px;
+	background: var(--primary-color);
+	border: none;
+	padding: 15px;
+	font-size: 1.2rem;
+}
+
+.order-form .btn:hover {
+	transform: translateY(-5px);
+}
