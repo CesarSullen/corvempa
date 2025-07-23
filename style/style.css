@@ -1,12 +1,9 @@
 :root {
-	--primary-color: #c8531a;
-	--secondary-color: #6b2c0f;
-	--light-color: #fdf6e3;
-	--bg-color: #f0d7a7;
-	--accent-color: #5a7f4b;
-	--highlight-color: #f4a261;
+	--primary-color: #c8ab1a;
+	--secondary-color: #252323;
+	--light-color: #fffaeb;
+	--dark-color: #2e2e2e;
 	--shadow-color: rgba(0, 0, 0, 0.15);
-	--text-color: #2e2e2e;
 }
 
 * {
@@ -16,18 +13,18 @@
 	list-style: none;
 	transition: all 0.3s;
 	text-decoration: none;
+	color: var(--light-color);
 }
 
 body {
 	font-family: "Roboto", sans-serif;
-	color: var(--text-color);
-	background-color: var(--light-color);
+	background-color: var(--dark-color);
 	line-height: 1.6;
 }
 
 /* Header */
 header {
-	background-color: var(--light-color);
+	background-color: var(--dark-color);
 	box-shadow: 0 4px 12px var(--shadow-color);
 	position: sticky;
 	top: 0;
@@ -52,11 +49,7 @@ header {
 	font-family: "Playfair Display", serif;
 	font-size: 2.5rem;
 	font-weight: 700;
-	background: linear-gradient(
-		to right,
-		var(--primary-color) 33%,
-		var(--secondary-color) 66%
-	);
+	background: var(--primary-color);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
@@ -73,7 +66,7 @@ header {
 }
 
 .burger-menu .line {
-	background: #000;
+	background: var(--light-color);
 	width: 100%;
 	height: 3px;
 }
@@ -89,37 +82,39 @@ header {
 }
 
 .nav-bar {
+	display: flex;
 	position: absolute;
 	flex-direction: column;
 	justify-content: center;
-	background-color: var(--light-color);
+	background-color: var(--dark-color);
 	right: 0;
-	top: 100%;
-	width: 50%;
+	top: 50dvh;
+	width: 70%;
+	transform: translate(-20%, -50%);
 	height: 0px;
 	overflow: hidden;
+	text-align: center;
+	gap: 15px;
 }
 
 .nav-bar.active {
-	height: 40dvh;
-	border-top: solid 3px var(--primary-color);
+	height: 60dvh;
+	border: solid 3px var(--primary-color);
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 	padding: 1rem;
 }
 
 nav ul li {
-	margin-block: 15px;
 	list-style: none;
 }
 
 nav ul li a {
 	text-decoration: none;
-	color: var(--text-color);
+	color: var(--light-color);
 	font-weight: 500;
 	font-family: "Montserrat", sans-serif;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	transition: all 0.3s ease;
-	padding: 5px;
 }
 
 nav ul li a:hover {
@@ -155,6 +150,7 @@ nav ul li a:hover::after {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 	justify-content: center;
 	position: relative;
 	backdrop-filter: blur(2px);
@@ -162,7 +158,7 @@ nav ul li a:hover::after {
 	padding: 100px 20px;
 	animation: fadeIn 1.5s ease;
 	width: 100%;
-	height: 100%;
+	height: 85dvh;
 }
 
 @keyframes fadeIn {
@@ -202,7 +198,7 @@ nav ul li a:hover::after {
 	display: inline-block;
 	padding: 15px 35px;
 	background-color: var(--primary-color);
-	color: var(--light-color);
+	color: var(--dark-color);
 	text-decoration: none;
 	border-radius: 0px;
 	font-weight: 600;
@@ -227,7 +223,7 @@ nav ul li a:hover::after {
 
 /* Secciones */
 .section {
-	padding: 70px 0;
+	padding: 2rem 0;
 }
 
 .section-title {
@@ -235,7 +231,7 @@ nav ul li a:hover::after {
 	margin-bottom: 60px;
 	font-family: "Playfair Display", serif;
 	font-size: 2.5rem;
-	color: var(--text-color);
+	color: var(--light-color);
 	position: relative;
 	display: inline-block;
 	left: 50%;
@@ -259,6 +255,10 @@ nav ul li a:hover::after {
 }
 
 /* Sección Menú */
+#menu {
+	background: var(--secondary-color);
+}
+
 .menu-container {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -274,6 +274,7 @@ nav ul li a:hover::after {
 	transition: all 0.4s ease;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	max-width: 350px;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -313,16 +314,30 @@ nav ul li a:hover::after {
 .menu-item-content {
 	padding: 1rem;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 }
 
 .menu-item-title {
 	font-family: "Playfair Display", serif;
 	font-size: 1.8rem;
-	margin-bottom: 15px;
-	color: var(--text-color);
+	color: var(--dark-color);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.menu-item-details {
+	font-family: "Playfair Display", serif;
+	font-weight: 700;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu-item-details span {
+	color: var(--dark-color);
 }
 
 .menu-item-price {
@@ -330,14 +345,12 @@ nav ul li a:hover::after {
 	color: var(--primary-color);
 	font-weight: 700;
 	font-size: 1.5rem;
-	text-align: right;
 	background-color: var(--light-color);
 	border-radius: 0px;
 }
 
 .menu-item-desc {
 	color: #666;
-	margin-bottom: 20px;
 	line-height: 1.7;
 	font-size: 1.05rem;
 }
@@ -346,8 +359,8 @@ nav ul li a:hover::after {
 	position: absolute;
 	top: -20px;
 	right: 20px;
-	background-color: var(--accent-color);
-	color: white;
+	background-color: var(--primary-color);
+	color: var(--dark-color);
 	padding: 5px 15px;
 	border-radius: 0px;
 	font-size: 0.9rem;
@@ -360,7 +373,7 @@ nav ul li a:hover::after {
 
 .menu-item-content h4 {
 	font-size: 1.4rem;
-	margin-bottom: 10px;
+	color: var(--dark-color);
 }
 
 .menu-item-content li {
@@ -368,13 +381,14 @@ nav ul li a:hover::after {
 	font-weight: bold;
 	display: flex;
 	justify-content: space-between;
+	color: var(--dark-color);
 }
 
 /* Sección Ubicación */
-.section#ubicacion {
-	background: var(--light-color);
+#ubicacion {
 	position: relative;
 	overflow: hidden;
+	background-color: var(--secondary-color);
 }
 
 #ubicacion .container {
@@ -383,11 +397,16 @@ nav ul li a:hover::after {
 	width: 100%;
 }
 
+#ubicacion .divider {
+	margin: 40px auto;
+	width: 90%;
+}
+
 .location-container {
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
-	padding: 1rem;
+	padding: 1.5rem;
 }
 
 .location-info {
@@ -395,7 +414,6 @@ nav ul li a:hover::after {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
-	background: rgba(255, 255, 255, 0.1);
 	border-radius: 10px;
 }
 
@@ -414,7 +432,7 @@ nav ul li a:hover::after {
 }
 
 .location-info a {
-	color: #000;
+	color: var(--light-color);
 }
 
 .location-info p strong {
@@ -448,11 +466,11 @@ nav ul li a:hover::after {
 
 .location-map {
 	min-width: 300px;
-	height: 400px;
+	aspect-ratio: 3/2;
 	border-radius: 15px;
 	overflow: hidden;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-	border: 3px solid var(--highlight-color);
+	border: 3px solid var(--primary-color);
 	transition: transform 0.3s ease;
 }
 
@@ -561,7 +579,7 @@ footer::before {
 	height: 5px;
 	background: linear-gradient(
 		to right,
-		var(--accent-color),
+		var(--primary-color),
 		var(--primary-color)
 	);
 }
@@ -666,10 +684,6 @@ footer::before {
 	padding-bottom: 8px;
 }
 
-.opening-hours li span:first-child {
-	color: var(--text-color);
-}
-
 .footer-bottom {
 	display: flex;
 	flex-direction: column;
@@ -735,7 +749,6 @@ footer::before {
 	color: var(--primary-color) !important;
 }
 
-/* Media Query for Larger Screens */
 @media screen and (min-width: 700px) {
 	header .container {
 		display: flex;
@@ -751,10 +764,8 @@ footer::before {
 		position: static;
 		display: flex;
 		flex-direction: row;
-		align-items: center;
-		width: auto;
-		height: auto;
 		overflow: visible;
+		transform: none;
 	}
 
 	nav ul {
@@ -771,14 +782,8 @@ footer::before {
 	}
 
 	nav ul li a {
-		text-decoration: none;
-		color: var(--text-color);
-		font-weight: 500;
-		font-family: "Montserrat", sans-serif;
 		font-size: 1.1rem;
 		transition: all 0.3s ease;
-		padding: 5px;
-		line-height: normal;
 		display: inline-block;
 	}
 
@@ -818,10 +823,6 @@ footer::before {
 		justify-content: center;
 	}
 
-	.section {
-		padding: 100px 0;
-	}
-
 	.section-title {
 		font-size: 3rem;
 	}
@@ -838,13 +839,17 @@ footer::before {
 		width: 90%;
 	}
 
+	#ubicacion .divider {
+		width: 100%;
+	}
+
 	.location-container {
 		flex-direction: row;
 		gap: 50px;
-		background: rgba(255, 255, 255, 0.433);
 		border-radius: 15px;
 		box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-		border: 1px solid rgba(255, 111, 97, 0.2);
+		border: 1px solid var(--primary-color);
+		background-color: var(--dark-color);
 	}
 
 	.location-info {
@@ -853,9 +858,12 @@ footer::before {
 		border-left: 4px solid var(--primary-color);
 	}
 
+	.location-info p strong {
+		min-width: 130px;
+	}
+
 	.location-map {
 		flex: 1;
-		height: 500px;
 	}
 
 	.social-contact {

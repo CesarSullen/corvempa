@@ -1,18 +1,14 @@
 /* Formulario de Pedido */
 .section#pedido {
-	background: linear-gradient(to bottom, var(--light-color), var(--bg-color));
-	padding: 80px 0;
 	position: relative;
 }
 
 .order-form {
-	background: var(--bg-color);
-	border-radius: 15px;
-	padding: 30px;
+	padding: 1rem;
 	box-shadow: 0 10px 30px var(--shadow-color);
 	max-width: 700px;
 	margin: 0 auto;
-	border: solid 2px var(--primary-color);
+	border: 1px solid var(--primary-color);
 }
 
 .form-group {
@@ -32,7 +28,7 @@
 	position: absolute;
 	width: 50px;
 	height: 3px;
-	background: var(--accent-color);
+	background: var(--primary-color);
 	bottom: -10px;
 	left: 0;
 }
@@ -41,7 +37,7 @@
 	display: block;
 	font-family: "Montserrat", sans-serif;
 	font-size: 1.1rem;
-	color: var(--text-color);
+	color: var(--light-color);
 	margin-bottom: 10px;
 	font-weight: 500;
 }
@@ -53,11 +49,10 @@
 	width: 100%;
 	padding: 12px;
 	border: 1px solid var(--primary-color);
-	border-radius: 5px;
 	font-size: 1rem;
 	font-family: "Roboto", sans-serif;
-	color: var(--text-color);
-	background: var(--light-color);
+	color: var(--light-color);
+	background: var(--secondary-color);
 	transition: border-color 0.3s ease;
 }
 
@@ -65,7 +60,7 @@
 .form-group textarea:focus,
 .form-group select:focus {
 	outline: none;
-	border-color: var(--accent-color);
+	border-color: var(--primary-color);
 	box-shadow: 0 0 8px rgba(90, 127, 75, 0.3);
 }
 
@@ -92,11 +87,10 @@
 	text-align: center;
 	padding: 12px;
 	border: 1px solid var(--primary-color);
-	border-radius: 5px;
 	font-size: 1rem;
 	font-family: "Roboto", sans-serif;
-	color: var(--text-color);
-	background: var(--light-color);
+	color: var(--light-color);
+	background: var(--secondary-color);
 	transition: border-color 0.3s ease;
 }
 
@@ -115,7 +109,7 @@
 .form-agregados h4 {
 	font-size: 1rem;
 	margin-bottom: 8px;
-	color: var(--secondary-color);
+	color: var(--primary-color);
 }
 
 .order-form .btn {

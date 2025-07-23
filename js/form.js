@@ -3,7 +3,7 @@ document.getElementById("order-form").addEventListener("submit", function (e) {
 	const form = e.target;
 	const name = form.name.value;
 	const phone = form.phone.value;
-	const notas = form.notas.value;
+	const notes = form.notes.value;
 
 	let message = `📋 *Nuevo Pedido de ${name}*\n📞 Teléfono: ${phone}\n\n🧁 *Productos*:\n`;
 	const items = [
@@ -84,7 +84,7 @@ document.getElementById("order-form").addEventListener("submit", function (e) {
 	}
 
 	message += `\n💰 *Total*: ${total}CUP\n`;
-	if (notas) message += `\n📝 *Notas*: ${notas}\n`;
+	if (notes) message += `\n📝 *Notas*: ${notes}\n`;
 
 	const whatsappURL = `https://wa.me/5359373721?text=${encodeURIComponent(
 		message
