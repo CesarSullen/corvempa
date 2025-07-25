@@ -1,9 +1,21 @@
 :root {
-	--primary-color: #c8ab1a;
+	--primary-color: #ffa217;
 	--secondary-color: #252323;
 	--light-color: #fffaeb;
 	--dark-color: #2e2e2e;
 	--shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Typography */
+@font-face {
+	font-family: "PlayfairDisplay";
+	src: url("../typography/PlayfairDisplay-Regular.ttf") format("truetype");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("../typography/Poppins-Regular.ttf") format("truetype");
+	font-weight: 400;
 }
 
 * {
@@ -14,10 +26,10 @@
 	transition: all 0.3s;
 	text-decoration: none;
 	color: var(--light-color);
+	font-family: "Poppins";
 }
 
 body {
-	font-family: "Roboto", sans-serif;
 	background-color: var(--dark-color);
 	line-height: 1.6;
 }
@@ -46,7 +58,6 @@ header {
 }
 
 .logo {
-	font-family: "Playfair Display", serif;
 	font-size: 2.5rem;
 	font-weight: 700;
 	background: var(--primary-color);
@@ -55,6 +66,7 @@ header {
 	color: transparent;
 	letter-spacing: 1px;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+	font-family: "PlayfairDisplay";
 }
 
 .burger-menu {
@@ -112,9 +124,7 @@ nav ul li a {
 	text-decoration: none;
 	color: var(--light-color);
 	font-weight: 500;
-	font-family: "Montserrat", sans-serif;
 	font-size: 1.5rem;
-	transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -173,17 +183,18 @@ nav ul li a:hover::after {
 }
 
 .hero h1 {
-	font-family: "Playfair Display", serif;
 	font-size: 2.5rem;
 	margin-bottom: 25px;
 	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 	letter-spacing: 1px;
+	font-family: "PlayfairDisplay";
 }
 
 .hero p {
 	font-size: 1.2rem;
 	margin-bottom: 40px;
 	font-style: italic;
+	font-family: "PlayfairDisplay";
 }
 
 .cta-section {
@@ -202,8 +213,6 @@ nav ul li a:hover::after {
 	text-decoration: none;
 	border-radius: 0px;
 	font-weight: 600;
-	font-family: "Montserrat", sans-serif;
-	transition: all 0.3s ease;
 	border: 2px solid var(--primary-color);
 	text-transform: uppercase;
 	text-align: center;
@@ -229,13 +238,13 @@ nav ul li a:hover::after {
 .section-title {
 	text-align: center;
 	margin-bottom: 60px;
-	font-family: "Playfair Display", serif;
 	font-size: 2.5rem;
 	color: var(--light-color);
 	position: relative;
 	display: inline-block;
 	left: 50%;
 	transform: translateX(-50%);
+	font-family: "PlayfairDisplay";
 }
 
 .section-title::after {
@@ -251,6 +260,7 @@ nav ul li a:hover::after {
 }
 
 .section-title span {
+	font-family: "PlayfairDisplay";
 	color: var(--primary-color);
 }
 
@@ -271,11 +281,9 @@ nav ul li a:hover::after {
 	border-radius: 0px;
 	overflow: hidden;
 	box-shadow: 0 10px 30px var(--shadow-color);
-	transition: all 0.4s ease;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	max-width: 350px;
 	width: 100%;
-	margin: 0 auto;
 }
 
 .menu-item:hover {
@@ -304,7 +312,6 @@ nav ul li a:hover::after {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transition: transform 0.8s ease;
 }
 
 .menu-item:hover .menu-item-img img {
@@ -312,7 +319,7 @@ nav ul li a:hover::after {
 }
 
 .menu-item-content {
-	padding: 1rem;
+	padding: 0.5rem;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -320,16 +327,15 @@ nav ul li a:hover::after {
 }
 
 .menu-item-title {
-	font-family: "Playfair Display", serif;
 	font-size: 1.8rem;
 	color: var(--dark-color);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	font-family: "PlayfairDisplay";
 }
 
 .menu-item-details {
-	font-family: "Playfair Display", serif;
 	font-weight: 700;
 	font-size: 1.5rem;
 	display: flex;
@@ -338,10 +344,10 @@ nav ul li a:hover::after {
 
 .menu-item-details span {
 	color: var(--dark-color);
+	font-family: "PlayfairDisplay";
 }
 
 .menu-item-price {
-	font-family: "Playfair Display", serif;
 	color: var(--primary-color);
 	font-weight: 700;
 	font-size: 1.5rem;
@@ -374,6 +380,7 @@ nav ul li a:hover::after {
 .menu-item-content h4 {
 	font-size: 1.4rem;
 	color: var(--dark-color);
+	font-family: "PlayfairDisplay";
 }
 
 .menu-item-content li {
@@ -382,6 +389,7 @@ nav ul li a:hover::after {
 	display: flex;
 	justify-content: space-between;
 	color: var(--dark-color);
+	font-family: "PlayfairDisplay";
 }
 
 /* Sección Ubicación */
@@ -418,7 +426,6 @@ nav ul li a:hover::after {
 }
 
 .location-info h3 {
-	font-family: "Playfair Display", serif;
 	font-size: 2.5rem;
 	color: var(--primary-color);
 	text-transform: uppercase;
@@ -440,7 +447,6 @@ nav ul li a:hover::after {
 	min-width: 100px;
 	color: var(--primary-color);
 	font-weight: 600;
-	font-family: "Montserrat", sans-serif;
 }
 
 .location-info ul {
@@ -471,7 +477,6 @@ nav ul li a:hover::after {
 	overflow: hidden;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 	border: 3px solid var(--primary-color);
-	transition: transform 0.3s ease;
 }
 
 .location-map:hover {
@@ -506,7 +511,6 @@ nav ul li a:hover::after {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transition: transform 0.8s ease;
 }
 
 .social-image:hover img {
@@ -528,14 +532,10 @@ nav ul li a:hover::after {
 	align-items: center;
 	gap: 15px;
 	padding: 15px 25px;
-	background-color: var(--primary-color);
-	color: var(--light-color);
 	text-decoration: none;
 	border-radius: 0px;
-	font-family: "Montserrat", sans-serif;
 	font-weight: 600;
 	font-size: 1.1rem;
-	transition: all 0.3s ease;
 	border: 2px solid var(--primary-color);
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -545,10 +545,18 @@ nav ul li a:hover::after {
 }
 
 .social-link:hover {
-	background-color: transparent;
-	color: var(--primary-color);
+	color: var(--light-color);
 	transform: translateY(-3px);
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	background-color: var(--primary-color);
+}
+
+.social-link * {
+	color: var(--primary-color);
+}
+
+.social-link:hover * {
+	color: var(--dark-color);
 }
 
 .social-icon {
@@ -592,7 +600,6 @@ footer::before {
 }
 
 .footer-logo {
-	font-family: "Playfair Display", serif;
 	font-size: 2.5rem;
 	background: linear-gradient(
 		to right,
@@ -604,6 +611,8 @@ footer::before {
 	color: transparent;
 	margin-bottom: 20px;
 	letter-spacing: 1px;
+	font-family: "PlayfairDisplay";
+	font-weight: bold;
 }
 
 .footer-slogan {
@@ -622,7 +631,6 @@ footer::before {
 .social-icons a {
 	color: var(--light-color);
 	font-size: 1.5rem;
-	transition: all 0.3s ease;
 	width: 45px;
 	height: 45px;
 	border-radius: 0%;
@@ -639,12 +647,12 @@ footer::before {
 }
 
 .footer-title {
-	font-family: "Playfair Display", serif;
 	font-size: 1.5rem;
 	margin-bottom: 25px;
 	color: var(--light-color);
 	position: relative;
 	display: inline-block;
+	font-family: "PlayfairDisplay";
 }
 
 .footer-title::after {
@@ -699,8 +707,6 @@ footer::before {
 	gap: 10px;
 	text-decoration: none;
 	color: #aaa;
-	font-size: 0.9rem;
-	transition: all 0.3s ease;
 }
 
 .footer-bottom a:hover {
@@ -710,6 +716,7 @@ footer::before {
 .footer-bottom .bold {
 	font-weight: 700;
 	color: var(--light-color);
+	font-family: "PlayfairDisplay";
 }
 
 .so-logo {
@@ -741,8 +748,8 @@ footer::before {
 .divider-text {
 	padding: 0 20px;
 	color: var(--primary-color);
-	font-family: "Playfair Display", serif;
 	font-style: italic;
+	font-weight: bold;
 }
 
 .oph {
@@ -783,7 +790,6 @@ footer::before {
 
 	nav ul li a {
 		font-size: 1.1rem;
-		transition: all 0.3s ease;
 		display: inline-block;
 	}
 
@@ -833,6 +839,10 @@ footer::before {
 
 	.menu-item {
 		max-width: none;
+	}
+
+	.menu-item-content {
+		padding: 1rem;
 	}
 
 	#ubicacion .container {
