@@ -125,6 +125,7 @@ nav ul li a {
 	color: var(--light-color);
 	font-weight: 500;
 	font-size: 1.5rem;
+	text-transform: uppercase;
 }
 
 nav ul li a:hover {
@@ -149,8 +150,9 @@ nav ul li a:hover::after {
 /* Hero Section */
 .hero {
 	height: auto;
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-		url("../assets/header.jpg") no-repeat center center/cover;
+	background: url("../assets/header.jpg") no-repeat center center/cover;
+	background-color: rgba(0, 0, 0, 0.5);
+	background-blend-mode: multiply;
 	color: var(--light-color);
 	position: relative;
 	overflow: hidden;
@@ -581,11 +583,7 @@ footer::before {
 	left: 0;
 	width: 100%;
 	height: 5px;
-	background: linear-gradient(
-		to right,
-		var(--primary-color),
-		var(--primary-color)
-	);
+	background: var(--primary-color);
 }
 
 .footer-content {
@@ -597,11 +595,7 @@ footer::before {
 
 .footer-logo {
 	font-size: 2.5rem;
-	background: linear-gradient(
-		to right,
-		var(--primary-color) 33%,
-		var(--light-color) 66%
-	);
+	background: var(--primary-color);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;

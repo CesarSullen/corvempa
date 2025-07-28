@@ -9,56 +9,56 @@ document.getElementById("order-form").addEventListener("submit", function (e) {
 	const items = [
 		{
 			id: "empanada-coco-guayaba",
-			name: "Empanada de Coco y Guayaba (c/u)",
-			price: 80,
-		},
-		{
-			id: "empanada-leche-condensada",
-			name: "Empanadas de Leche Condensada (10 u)",
-			price: 1000,
-		},
-		{
-			id: "empanada-jamon",
-			name: "Empanadas de Jamón (10 u)",
-			price: 1300,
-		},
-		{
-			id: "empanada-queso",
-			name: "Empanadas de Queso (10 u)",
-			price: 1300,
-		},
-		{
-			id: "empanada-jamon-queso",
-			name: "Empanadas de Jamón y Queso (10 u)",
-			price: 1400,
-		},
-		{
-			id: "croquetas-especias",
-			name: "Croquetas de Especias (30 u)",
-			price: 2000,
-			added: form["croquetas-especias-agregado"].value,
-		},
-		{
-			id: "rosquillas-tradicionales",
-			name: "Rosquillas Tradicionales (10 u)",
-			price: 800,
-			added: form["rosquillas-tradicionales-agregado"].value,
-		},
-		{
-			id: "churros-tradicionales",
-			name: "Churros Tradicionales (500gr)",
-			price: 800,
-			added: form["churros-tradicionales-agregado"].value,
-		},
-		{
-			id: "margaritas-guayaba",
-			name: "Margaritas Rellenas de Guayaba (15 u)",
-			price: 570,
+			name: "Empanadas Coco o Guayaba (c/u)",
+			price: 70,
+			added: form["empanada-coco-guayaba-agregado"].value,
 		},
 		{
 			id: "calzones-guayaba",
-			name: "Calzones Rellenos de Guayaba (c/u)",
+			name: "Calzones Guayaba (c/u)",
 			price: 80,
+		},
+		{
+			id: "flores-guayaba",
+			name: "Flores Guayaba (c/u)",
+			price: 40,
+		},
+		{
+			id: "bizcocho-corvempa",
+			name: "Bizcocho Corvempa (16 cm)",
+			price: 1300,
+			added: form["bizcocho-corvempa-agregado"].value,
+		},
+		{
+			id: "rosquitas-azucaradas",
+			name: "Rosquitas Azucaradas (10 uds.)",
+			price: 800,
+		},
+		{
+			id: "churros-leche-condensada",
+			name: "Churros Leche Condensada (40 uds.)",
+			price: 1600,
+		},
+		{
+			id: "crepes-nutella",
+			name: "Crepes Nutella (20 uds.)",
+			price: 4000,
+		},
+		{
+			id: "crepes-chocolate",
+			name: "Crepes Chocolate Clásico (20 uds.)",
+			price: 3000,
+		},
+		{
+			id: "trufas-chocolate",
+			name: "Trufas Chocolate y Leche Condensada (18 uds.)",
+			price: 2400,
+		},
+		{
+			id: "piononos-crujientes",
+			name: "Piononos Crujientes (7 uds.)",
+			price: 1200,
+			added: form["piononos-crujientes-agregado"].value,
 		},
 	];
 
@@ -67,11 +67,9 @@ document.getElementById("order-form").addEventListener("submit", function (e) {
 		const quantity = parseInt(form[item.id].value);
 		if (quantity > 0) {
 			let itemTotal = quantity * item.price;
-			let itemText = `${quantity} x ${item.name} - ${itemTotal}CUP`;
+			let itemText = `${quantity} x ${item.name} - ${itemTotal} CUP`;
 			if (item.added && item.added !== "") {
-				itemText += ` (Agregado: ${item.added})`;
-				const addedPrice = parseInt(item.added.match(/\d+/)[0]);
-				itemTotal += quantity * addedPrice;
+				itemText += ` (Sabor: ${item.added})`;
 			}
 			message += `${itemText}\n`;
 			total += itemTotal;
@@ -83,7 +81,7 @@ document.getElementById("order-form").addEventListener("submit", function (e) {
 		return;
 	}
 
-	message += `\n💰 *Total*: ${total}CUP\n`;
+	message += `\n💰 *Total*: ${total} CUP\n`;
 	if (notes) message += `\n📝 *Notas*: ${notes}\n`;
 
 	const whatsappURL = `https://wa.me/5359373721?text=${encodeURIComponent(

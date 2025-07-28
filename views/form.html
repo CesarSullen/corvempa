@@ -37,11 +37,9 @@
 			</div>
 		</header>
 
-		<!-- Formulario de Pedido -->
 		<section id="pedido" class="section">
 			<div class="container">
 				<h2 class="section-title">Hacer <span>Pedido</span></h2>
-
 				<form id="order-form" class="order-form">
 					<div class="form-group">
 						<label for="name">Nombre:</label>
@@ -64,9 +62,18 @@
 						/>
 					</div>
 					<div class="form-group">
-						<h3>Empanadas</h3>
+						<h3>Individuales</h3>
 						<div class="form-item">
-							<label for="empanada-coco-guayaba">Coco y Guayaba (c/u):</label>
+							<label for="empanada-coco-guayaba"
+								>Empanadas <span class="form-price">(70 CUP)</span>:</label
+							>
+							<div class="form-agregados">
+								<select name="empanada-coco-guayaba-agregado">
+									<option value="">Selecciona sabor</option>
+									<option value="Coco">Coco</option>
+									<option value="Guayaba">Guayaba</option>
+								</select>
+							</div>
 							<input
 								type="number"
 								id="empanada-coco-guayaba"
@@ -74,145 +81,11 @@
 								min="0"
 								value="0"
 							/>
-							<span class="form-price">80CUP</span>
-						</div>
-						<div class="form-item">
-							<label for="empanada-leche-condensada"
-								>Leche Condensada (10 u):</label
-							>
-							<input
-								type="number"
-								id="empanada-leche-condensada"
-								name="empanada-leche-condensada"
-								min="0"
-								value="0"
-							/>
-							<span class="form-price">1000CUP</span>
-						</div>
-						<div class="form-item">
-							<label for="empanada-jamon">Jamón (10 u):</label>
-							<input
-								type="number"
-								id="empanada-jamon"
-								name="empanada-jamon"
-								min="0"
-								value="0"
-							/>
-							<span class="form-price">1300CUP</span>
-						</div>
-						<div class="form-item">
-							<label for="empanada-queso">Queso (10 u):</label>
-							<input
-								type="number"
-								id="empanada-queso"
-								name="empanada-queso"
-								min="0"
-								value="0"
-							/>
-							<span class="form-price">1300CUP</span>
-						</div>
-						<div class="form-item">
-							<label for="empanada-jamon-queso">Jamón y Queso (10 u):</label>
-							<input
-								type="number"
-								id="empanada-jamon-queso"
-								name="empanada-jamon-queso"
-								min="0"
-								value="0"
-							/>
-							<span class="form-price">1400CUP</span>
-						</div>
-					</div>
-					<div class="form-group">
-						<h3>Dulces</h3>
-						<div class="form-item">
-							<label for="croquetas-especias"
-								>Croquetas de Especias (30 u):</label
-							>
-							<input
-								type="number"
-								id="croquetas-especias"
-								name="croquetas-especias"
-								min="0"
-								value="0"
-							/>
-							<span class="form-price">2000CUP</span>
-							<div class="form-agregados">
-								<select name="croquetas-especias-agregado">
-									<option value="">Sin agregado</option>
-									<option value="Queso (+650CUP)">Queso (+650CUP)</option>
-									<option value="Pollo (+800CUP)">Pollo (+800CUP)</option>
-									<option value="Jamón (+1200CUP)">Jamón (+1200CUP)</option>
-									<option value="Jamón y Queso (+1650CUP)">
-										Jamón y Queso (+1650CUP)
-									</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-item">
-							<label for="rosquillas-tradicionales"
-								>Rosquillas Tradicionales (10 u):</label
-							>
-							<input
-								type="number"
-								id="rosquillas-tradicionales"
-								name="rosquillas-tradicionales"
-								min="0"
-								value="0"
-							/>
-							<span class="form-price">800CUP</span>
-							<div class="form-agregados">
-								<select name="rosquillas-tradicionales-agregado">
-									<option value="">Sin agregado</option>
-									<option value="Chocolate (+500CUP)">
-										Chocolate (+500CUP)
-									</option>
-									<option value="Leche Condensada (+500CUP)">
-										Leche Condensada (+500CUP)
-									</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-item">
-							<label for="churros-tradicionales"
-								>Churros Tradicionales (500gr):</label
-							>
-							<input
-								type="number"
-								id="churros-tradicionales"
-								name="churros-tradicionales"
-								min="0"
-								value="0"
-							/>
-							<span class="form-price">800CUP</span>
-							<div class="form-agregados">
-								<select name="churros-tradicionales-agregado">
-									<option value="">Sin agregado</option>
-									<option value="Chocolate (+500CUP)">
-										Chocolate (+500CUP)
-									</option>
-									<option value="Leche Condensada (+500CUP)">
-										Leche Condensada (+500CUP)
-									</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-item">
-							<label for="margaritas-guayaba"
-								>Margaritas Rellenas de Guayaba (15 u):</label
-							>
-							<input
-								type="number"
-								id="margaritas-guayaba"
-								name="margaritas-guayaba"
-								min="0"
-								value="0"
-							/>
-							<span class="form-price">570CUP</span>
 						</div>
 						<div class="form-item">
 							<label for="calzones-guayaba"
-								>Calzones Rellenos de Guayaba (c/u):</label
+								>Calzones Guayaba
+								<span class="form-price">(80 CUP)</span>:</label
 							>
 							<input
 								type="number"
@@ -221,7 +94,127 @@
 								min="0"
 								value="0"
 							/>
-							<span class="form-price">80CUP</span>
+						</div>
+						<div class="form-item">
+							<label for="flores-guayaba"
+								>Flores Guayaba <span class="form-price">(40 CUP)</span>:</label
+							>
+							<input
+								type="number"
+								id="flores-guayaba"
+								name="flores-guayaba"
+								min="0"
+								value="0"
+							/>
+						</div>
+						<div class="form-item">
+							<label for="bizcocho-corvempa"
+								>Bizcocho Corvempa
+								<span class="form-price">(1300 CUP)</span>:</label
+							>
+							<div class="form-agregados">
+								<select name="bizcocho-corvempa-agregado">
+									<option value="">Selecciona sabor</option>
+									<option value="Chocolate">Chocolate</option>
+									<option value="Vainilla">Vainilla</option>
+								</select>
+							</div>
+							<input
+								type="number"
+								id="bizcocho-corvempa"
+								name="bizcocho-corvempa"
+								min="0"
+								value="0"
+							/>
+						</div>
+					</div>
+					<div class="form-group">
+						<h3>Bandejas</h3>
+						<div class="form-item">
+							<label for="rosquitas-azucaradas"
+								>Rosquitas Azucaradas
+								<span class="form-price">(10 uds. - 800 CUP)</span>:</label
+							>
+							<input
+								type="number"
+								id="rosquitas-azucaradas"
+								name="rosquitas-azucaradas"
+								min="0"
+								value="0"
+							/>
+						</div>
+						<div class="form-item">
+							<label for="churros-leche-condensada"
+								>Churros Leche Condensada
+								<span class="form-price">(40 uds. - 1600 CUP)</span>:</label
+							>
+							<input
+								type="number"
+								id="churros-leche-condensada"
+								name="churros-leche-condensada"
+								min="0"
+								value="0"
+							/>
+						</div>
+						<div class="form-item">
+							<label for="crepes-nutella"
+								>Crepes Nutella
+								<span class="form-price">(20 uds. - 4000 CUP)</span>:</label
+							>
+							<input
+								type="number"
+								id="crepes-nutella"
+								name="crepes-nutella"
+								min="0"
+								value="0"
+							/>
+						</div>
+						<div class="form-item">
+							<label for="crepes-chocolate"
+								>Crepes Chocolate Clásico
+								<span class="form-price">(20 uds. - 3000 CUP)</span>:</label
+							>
+							<input
+								type="number"
+								id="crepes-chocolate"
+								name="crepes-chocolate"
+								min="0"
+								value="0"
+							/>
+						</div>
+						<div class="form-item">
+							<label for="trufas-chocolate"
+								>Trufas Chocolate y Leche Condensada
+								<span class="form-price">(18 uds. - 2400 CUP)</span>:</label
+							>
+							<input
+								type="number"
+								id="trufas-chocolate"
+								name="trufas-chocolate"
+								min="0"
+								value="0"
+							/>
+						</div>
+						<div class="form-item">
+							<label for="piononos-crujientes"
+								>Piononos
+								<span class="form-price">(7 uds. - 1200 CUP)</span>:</label
+							>
+							<div class="form-agregados">
+								<select name="piononos-crujientes-agregado">
+									<option value="">Selecciona sabor</option>
+									<option value="Vainilla">Vainilla</option>
+									<option value="Fresa">Fresa</option>
+									<option value="Chocolate">Chocolate</option>
+								</select>
+							</div>
+							<input
+								type="number"
+								id="piononos-crujientes"
+								name="piononos-crujientes"
+								min="0"
+								value="0"
+							/>
 						</div>
 					</div>
 					<div class="form-group">
