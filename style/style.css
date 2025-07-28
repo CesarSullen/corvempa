@@ -322,7 +322,7 @@ nav ul li a:hover::after {
 }
 
 .menu-item-content {
-	padding: 0.5rem;
+	padding: 1rem;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -809,10 +809,6 @@ footer::before {
 
 	.menu-item {
 		max-width: none;
-	}
-
-	.menu-item-content {
-		padding: 1rem;
 	}
 
 	#ubicacion .container {
