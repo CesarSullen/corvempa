@@ -8,10 +8,14 @@ document.getElementById("order-form").addEventListener("submit", function (e) {
 	let message = `📋 *Nuevo Pedido de ${name}*\n📞 Teléfono: ${phone}\n\n🧁 *Productos*:\n`;
 	const items = [
 		{
-			id: "empanada-coco-guayaba",
-			name: "Empanadas Coco o Guayaba (c/u)",
+			id: "empanada-coco",
+			name: "Empanada Coco (c/u)",
 			price: 70,
-			added: form["empanada-coco-guayaba-agregado"].value,
+		},
+		{
+			id: "empanada-guayaba",
+			name: "Empanada Guayaba (c/u)",
+			price: 70,
 		},
 		{
 			id: "calzones-guayaba",
@@ -24,10 +28,14 @@ document.getElementById("order-form").addEventListener("submit", function (e) {
 			price: 40,
 		},
 		{
-			id: "bizcocho-corvempa",
-			name: "Bizcocho Corvempa (16 cm)",
+			id: "bizcocho-chocolate",
+			name: "Bizcocho Chocolate (16 cm)",
 			price: 1300,
-			added: form["bizcocho-corvempa-agregado"].value,
+		},
+		{
+			id: "bizcocho-vainilla",
+			name: "Bizcocho Vainilla (16 cm)",
+			price: 1300,
 		},
 		{
 			id: "rosquitas-azucaradas",
@@ -55,10 +63,19 @@ document.getElementById("order-form").addEventListener("submit", function (e) {
 			price: 2400,
 		},
 		{
-			id: "piononos-crujientes",
-			name: "Piononos Crujientes (7 uds.)",
+			id: "piononos-vainilla",
+			name: "Piononos Vainilla (7 uds.)",
 			price: 1200,
-			added: form["piononos-crujientes-agregado"].value,
+		},
+		{
+			id: "piononos-fresa",
+			name: "Piononos Fresa (7 uds.)",
+			price: 1200,
+		},
+		{
+			id: "piononos-chocolate",
+			name: "Piononos Chocolate (7 uds.)",
+			price: 1200,
 		},
 	];
 
@@ -66,12 +83,8 @@ document.getElementById("order-form").addEventListener("submit", function (e) {
 	items.forEach((item) => {
 		const quantity = parseInt(form[item.id].value);
 		if (quantity > 0) {
-			let itemTotal = quantity * item.price;
-			let itemText = `${quantity} x ${item.name} - ${itemTotal} CUP`;
-			if (item.added && item.added !== "") {
-				itemText += ` (Sabor: ${item.added})`;
-			}
-			message += `${itemText}\n`;
+			const itemTotal = quantity * item.price;
+			message += `${quantity} x ${item.name} - ${itemTotal} CUP\n`;
 			total += itemTotal;
 		}
 	});

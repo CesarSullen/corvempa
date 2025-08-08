@@ -18,7 +18,7 @@
 		<header>
 			<div class="container">
 				<div class="header-content">
-					<div class="logo">Corvempa</div>
+					<a href="./" class="logo">Corvempa</a>
 					<div class="burger-menu" onclick="toggleMenu()">
 						<div class="line"></div>
 						<div class="line"></div>
@@ -27,7 +27,6 @@
 				</div>
 				<nav>
 					<ul class="nav-bar">
-						<li><a href="index.html">Inicio</a></li>
 						<li><a href="index.html#menu">Menú</a></li>
 						<li><a href="index.html#dulces">Dulces</a></li>
 						<li><a href="index.html#ubicacion">Ubicación</a></li>
@@ -64,20 +63,26 @@
 					<div class="form-group">
 						<h3>Individuales</h3>
 						<div class="form-item">
-							<label for="empanada-coco-guayaba"
-								>Empanadas <span class="form-price">(70 CUP)</span>:</label
+							<label for="empanada-coco"
+								>Empanada Coco <span class="form-price">(70 CUP)</span>:</label
 							>
-							<div class="form-agregados">
-								<select name="empanada-coco-guayaba-agregado">
-									<option value="">Selecciona sabor</option>
-									<option value="Coco">Coco</option>
-									<option value="Guayaba">Guayaba</option>
-								</select>
-							</div>
 							<input
 								type="number"
-								id="empanada-coco-guayaba"
-								name="empanada-coco-guayaba"
+								id="empanada-coco"
+								name="empanada-coco"
+								min="0"
+								value="0"
+							/>
+						</div>
+						<div class="form-item">
+							<label for="empanada-guayaba"
+								>Empanada Guayaba
+								<span class="form-price">(70 CUP)</span>:</label
+							>
+							<input
+								type="number"
+								id="empanada-guayaba"
+								name="empanada-guayaba"
 								min="0"
 								value="0"
 							/>
@@ -108,21 +113,27 @@
 							/>
 						</div>
 						<div class="form-item">
-							<label for="bizcocho-corvempa"
-								>Bizcocho Corvempa
+							<label for="bizcocho-chocolate"
+								>Bizcocho Chocolate
 								<span class="form-price">(1300 CUP)</span>:</label
 							>
-							<div class="form-agregados">
-								<select name="bizcocho-corvempa-agregado">
-									<option value="">Selecciona sabor</option>
-									<option value="Chocolate">Chocolate</option>
-									<option value="Vainilla">Vainilla</option>
-								</select>
-							</div>
 							<input
 								type="number"
-								id="bizcocho-corvempa"
-								name="bizcocho-corvempa"
+								id="bizcocho-chocolate"
+								name="bizcocho-chocolate"
+								min="0"
+								value="0"
+							/>
+						</div>
+						<div class="form-item">
+							<label for="bizcocho-vainilla"
+								>Bizcocho Vainilla
+								<span class="form-price">(1300 CUP)</span>:</label
+							>
+							<input
+								type="number"
+								id="bizcocho-vainilla"
+								name="bizcocho-vainilla"
 								min="0"
 								value="0"
 							/>
@@ -196,22 +207,40 @@
 							/>
 						</div>
 						<div class="form-item">
-							<label for="piononos-crujientes"
-								>Piononos
+							<label for="piononos-vainilla"
+								>Piononos Vainilla
 								<span class="form-price">(7 uds. - 1200 CUP)</span>:</label
 							>
-							<div class="form-agregados">
-								<select name="piononos-crujientes-agregado">
-									<option value="">Selecciona sabor</option>
-									<option value="Vainilla">Vainilla</option>
-									<option value="Fresa">Fresa</option>
-									<option value="Chocolate">Chocolate</option>
-								</select>
-							</div>
 							<input
 								type="number"
-								id="piononos-crujientes"
-								name="piononos-crujientes"
+								id="piononos-vainilla"
+								name="piononos-vainilla"
+								min="0"
+								value="0"
+							/>
+						</div>
+						<div class="form-item">
+							<label for="piononos-fresa"
+								>Piononos Fresa
+								<span class="form-price">(7 uds. - 1200 CUP)</span>:</label
+							>
+							<input
+								type="number"
+								id="piononos-fresa"
+								name="piononos-fresa"
+								min="0"
+								value="0"
+							/>
+						</div>
+						<div class="form-item">
+							<label for="piononos-chocolate"
+								>Piononos Chocolate
+								<span class="form-price">(7 uds. - 1200 CUP)</span>:</label
+							>
+							<input
+								type="number"
+								id="piononos-chocolate"
+								name="piononos-chocolate"
 								min="0"
 								value="0"
 							/>
@@ -235,7 +264,7 @@
 			<div class="container">
 				<div class="footer-content">
 					<div class="footer-about">
-						<div class="footer-logo">Corvempa</div>
+						<a href="./" class="footer-logo">Corvempa</a>
 						<p class="footer-slogan">"Disfruta lo bueno que Dios nos da."</p>
 						<div class="social-icons">
 							<a href="https://www.facebook.com/corvempa" target="_blank">

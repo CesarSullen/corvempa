@@ -232,6 +232,20 @@ nav ul li a:hover::after {
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.ghost-btn {
+	background-color: transparent;
+	color: var(--light-color);
+}
+
+.ghost-btn:hover {
+	background-color: var(--primary-color);
+	color: var(--dark-color);
+}
+
+.bold {
+	font-weight: 600;
+	color: black;
+}
 /* Secciones */
 .section {
 	padding: 2rem 0;
@@ -460,7 +474,7 @@ nav ul li a:hover::after {
 }
 
 .location-info ul li::before {
-	content: "★";
+	content: "⚬";
 	color: var(--primary-color);
 	font-size: 1.2rem;
 	position: absolute;
@@ -475,10 +489,6 @@ nav ul li a:hover::after {
 	overflow: hidden;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 	border: 3px solid var(--primary-color);
-}
-
-.location-map:hover {
-	transform: scale(1.02);
 }
 
 .location-map iframe {
@@ -827,7 +837,6 @@ footer::before {
 	.location-info {
 		flex: 1;
 		padding-left: 1rem;
-		border-left: 4px solid var(--primary-color);
 	}
 
 	.location-info p strong {
