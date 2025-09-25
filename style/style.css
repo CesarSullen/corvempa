@@ -17,6 +17,16 @@
 	src: url("../typography/Poppins-Regular.ttf") format("truetype");
 	font-weight: 400;
 }
+@font-face {
+	font-family: "Poppins";
+	src: url("../typography/Poppins-Bold.ttf") format("truetype");
+	font-weight: bold;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("../typography/Poppins-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+}
 
 * {
 	margin: 0;
